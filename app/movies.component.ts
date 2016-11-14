@@ -21,4 +21,12 @@ export class MoviesComponent {
   toggleFavorite(movie: Movie): void {
     movie.favorite = !movie.favorite;
   }
+
+  setClasses(movie: Movie): { [key:string]: boolean } {
+    let classes = {
+      'fa-heart-o': !movie.favorite,
+      'fa-heart':   movie.favorite
+    };
+    return classes;
+  }
 }

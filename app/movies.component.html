@@ -1,7 +1,9 @@
 <h2>All movies</h2>
 <div *ngFor="let movie of movies"
-      [class.favorite]="movie.favorite"
-      class="movie"
-      (click)="toggleFavorite(movie)">
+  [class.favorite]="movie.favorite"
+  class="movie">
+  <i class="fa"
+    [ngClass]="setClasses(movie)"
+    (click)="toggleFavorite(movie); $event.stopPropagation()"></i>
   {{movie.title}}
 </div>
