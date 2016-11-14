@@ -17,4 +17,8 @@ const MOVIES: Movie[] = [
 })
 export class MoviesComponent {
   movies = MOVIES;
+
+  toggleFavorite(movie: Movie): void {
+    movie.favorite = !movie.favorite;
+  }
 }

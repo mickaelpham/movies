@@ -1,2 +1,7 @@
 <h2>All movies</h2>
-<div *ngFor="let movie of movies" [class.favorite]="movie.favorite">{{movie.title}}</div>
+<div *ngFor="let movie of movies"
+      [class.favorite]="movie.favorite"
+      class="movie"
+      (click)="toggleFavorite(movie)">
+  {{movie.title}}
+</div>
