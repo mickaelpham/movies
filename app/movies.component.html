@@ -1,1 +1,2 @@
 <h2>All movies</h2>
+<div *ngFor="let movie of movies" [class.favorite]="movie.favorite">{{movie.title}}</div>
